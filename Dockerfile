@@ -8,5 +8,4 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/StudentResultSystem-1.0.0.jar app.jar
 EXPOSE 10000
-ENV SPRING_PROFILES_ACTIVE=prod
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dserver.port=10000", "-jar", "app.jar"]
