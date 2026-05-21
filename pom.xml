@@ -26,6 +26,12 @@
     </properties>
 
     <dependencies>
+        <!-- PostgreSQL Driver - for cloud deployment -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <!-- Spring Boot Web - for REST API -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
